@@ -12,8 +12,6 @@ var mooneX = 98;
 
 var hlineY = 372;
 
-
-
 function setup() {
   createCanvas(500, 500);
 }
@@ -21,27 +19,28 @@ function setup() {
 function draw() {
   background(255);
 
-  //moonA
+  //moonA lighter teal circle on bottom
   stroke(0);
   strokeWeight(1 / 4);
   fill(105, 141, 168);
-  circle(moonaX, moonaY, 245 / 2)
+  ellipse(moonaX, moonaY, 245, 245)
   
-  //moonB
+  
+  //moonB dark blue circle
   fill(2, 32, 55);
-  circle(moonbX, moonbY, 249 / 2);
+  ellipse(moonbX, moonbY, 249, 249);
   
-  //moonC
+  //moonC darker light blue circle
   fill(164, 200, 228);
-  circle(mooncX, mooncY, 215 / 2)
+  ellipse(mooncX, mooncY, 215, 215);
   
-  //moonD
+  //moonD dark teal circle
   fill(14, 59, 94);
-  circle(moondX, moondY, 246 / 2);
+  ellipse(moondX, moondY, 246, 246);
   
-  //moonE
+  //moonE lightest blue circle
   fill(209 , 227, 241);
-  circle(mooneX, mooneY, 195 / 2);
+  ellipse(mooneX, mooneY, 195, 195);
   
   
   stroke(0);
@@ -50,26 +49,10 @@ function draw() {
   circle(271, 240, 334 / 2);
   
   
-  stroke(28, 26, 73);
-  strokeWeight(6);
-  strokeCap(ROUND);
- 
-   beginShape();
-  line(183, hlineY, 354, hlineY);
-  line(354, 372);
-  line(268, 378);
-  endShape();  
-  
-  hlineY = hlineY - 1
-  
-  if (hlineY <= 145) {
-    hlineY = 372
-  }
-  
-  //shadow line
+  //ring around saturn
   noFill()
   stroke(208, 210, 211);
-  strokeWeight(1);
+  strokeWeight(5);
   beginShape();
   curveVertex(400, 230);
   curveVertex(100, 241);
@@ -80,6 +63,7 @@ function draw() {
   curveVertex(48, 230);
   endShape();
   
+ 
 
   
 }
