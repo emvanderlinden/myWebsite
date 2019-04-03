@@ -25,6 +25,35 @@ function draw() {
   fill(105, 141, 168);
   ellipse(moonaX, moonaY, 245, 245)
   
+  moonaX = moonaX + 2;
+  
+  if(moonaX >= 600){
+    moonaX = -200
+  }
+  
+  moonbY = moonbY + 2.5;
+  
+  if(moonbY >= 600){
+    moonbY = -200
+  }
+  
+  mooncX = mooncX - 1.75;
+  
+  if(mooncX <=-200){
+    mooncX = 700
+  }
+  
+  moondY = moondY - 3
+  
+  if(moondY <= -200){
+    moondY = 650
+  }
+  
+  mooneX = mooneX - 4
+  if(mooneX <=-400){
+    mooneX = 625
+  }
+  
   
   //moonB dark blue circle
   fill(2, 32, 55);
@@ -64,6 +93,5 @@ function draw() {
   endShape();
   
  
-
   
 }
